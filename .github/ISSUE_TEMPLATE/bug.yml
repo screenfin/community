@@ -1,0 +1,46 @@
+name: Bug report
+description: Something is wrong on a specific platform.
+labels: [bug]
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [iPhone / iPad, Apple TV, Android TV, Android phone / tablet, Web, Server]
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Settings → About on the apps; for the web client or server, the SCREENFIN_VERSION your install runs.
+    validations:
+      required: true
+  - type: input
+    id: jellyfin-version
+    attributes:
+      label: Jellyfin version
+      placeholder: 10.11.x
+  - type: dropdown
+    id: party
+    attributes:
+      label: In a watch party?
+      options: [No — solo playback, Yes — hosting, Yes — joined]
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: 1. … 2. … 3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: For the server, `docker compose logs screenfin-server` around the time it happened. Remove tokens and addresses you don't want public.

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or how-to
+    url: https://github.com/screenfin/community/discussions
+    about: Ask in Discussions; issues are for bugs and requests.
+  - name: Self-hosting the server
+    url: https://screenfin.app/docs/
+    about: Installing, reverse proxy, pairing and updating.
+  - name: Billing or account
+    url: mailto:support@screenfin.app
+    about: Never in a public issue.
